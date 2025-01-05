@@ -17,6 +17,12 @@ For bulk storage, I am using a budget Synology NAS on the same network.
 Ubuntu 24.04 should have Netplan installed by default. 
 You should have a file 50-cloud-init.yaml in the director `/etc/netplan`.
 
+**Install bridge utils**
+
+```
+apt-get install bridge-utils
+```
+
 **Make a back up your Netplan configuration file**
 
 `sudo cp /etc/netplan/50-cloud-init.yaml /etc/netplan/50-cloud-init.yaml.original`
