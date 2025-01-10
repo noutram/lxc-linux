@@ -137,3 +137,25 @@ lo                7eeff30e-3dcb-4f71-82e2-0d67843be18e  loopback  lo
 ```
 
 
+## Configure LXC containers to use the bridge:
+
+When creating or configuring your LXC containers, specify the use of the br0 bridge interface. 
+
+For example, in the container configuration file (usually located in /var/lib/lxc/<container_name>/config), add or modify the network configuration:
+       lxc.net.0.type = veth
+       lxc.net.0.link = br0
+       lxc.net.0.flags = up
+       lxc.net.0.hwaddr = 00:16:3e:xx:xx:xx  # Optional: you can specify a MAC address
+       
+This configuration sets up a virtual Ethernet device (veth) for the container and links it to the br0 bridge interface.
+
+
+### Start the LXC container:
+       sudo lxc-start -n <container_name>
+
+### Verify the setup:
+Ensure that the container gets an IP address from the same network as the host and can communicate with other devices on the network.
+
+---
+
+[NEXT - Install and Configure LXC](./Install_LXC.md)
