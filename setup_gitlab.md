@@ -82,6 +82,15 @@ It will take a few minutes to start up. Once started, you can access via a brows
 
 The user is root. Using the container terminal (suggest using portainer)  the password is found in /etc/gitlab/initial_root_password
 
+Sign in, and then reset your root password:
+
+http://192.168.1.2/admin/users/root
+
+(substitute your IP)
+
+---
+
+
 
 
 
