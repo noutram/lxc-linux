@@ -19,9 +19,11 @@ Add Docker Hub to the list of registries. Look for the [registries.search] secti
 registries = ['docker.io', 'quay.io', 'registry.fedoraproject.org', 'registry.access.redhat.com', 'registry.centos.org']
 ```
 
-## Install Portainer-CE (OPTIONAL)
+## Install Portainer-CE (reccomended) 
 
-Now to help us manage the containers, install portainer-ce
+Unless you are already familiar with docker / portainer, it is strongly reccomended you use the community issue of portainer (a FOSS alternative to docker).
+
+Now to help us manage the containers, install `portainer-ce` as follows:
 
 ```
 podman pull docker.io/portainer/portainer-ce`
