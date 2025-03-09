@@ -147,7 +147,8 @@ nano /etc/ssh/sshd_config
 Ensure the following lines are present and uncommented
 
 ```
-PermitRootLogin no AllowUsers newuser
+PermitRootLogin no
+AllowUsers newuser
 ```
 
 If you make any edits, then restart the SSH service to apply changes
